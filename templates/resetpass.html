@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}home{% endblock %}
+
+
+{% block content %} 
+
+<!-- reset password page -->
+<section class="w-full px-8 py-16 bg-white xl:px-8">
+    <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col items-center md:flex-row">
+
+              <div class="w-full md:w-2/5">
+                <div class="w-full h-auto overflow-hidden">
+                    <img src="../static/undraw_my_password_d6kg.png">
+                  </div>
+              </div>
+
+            <div class="w-full mt-16 md:mt-0 md:w-2/5">
+                <div class="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
+                    <h3 class="mb-6 text-2xl font-medium text-center">Reset Password</h3>
+                    <form action="{{ url_for('register') }}" method="POST">
+                        
+                        <input type="password" name="password" class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-blue-500 focus:outline-none" placeholder="Enter new password">
+                        <div class="block">
+                            <button class="w-full px-3 py-4 font-medium text-white bg-blue-600 rounded-lg">Confirm Reset</button>
+                        </div>
+                    </form>
+                    
+                </div>
+                <p class="w-full mt-4 text-center text-gray-800">Already have an account? <a href="{{ url_for('home')}}" class="font-bold text-red-600">Take me Home</a></p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
